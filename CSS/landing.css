@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Loved by the King", cursive;
+    font-weight: 500;
+}
+
+body{
+    touch-action: pan-y;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgba(49, 255, 128, 0.788) ;
+    padding-bottom: 40px;
+}
+
+.fixeds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+}
+
+header{
+    display: flex;
+    top: 0;
+    z-index: 2;
+}
+
+header h1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white ;
+    font-weight: bolder;
+}
+
+header h1 span{
+    color: yellow;
+    font-weight: bolder;
+}
+
+.dedicatoria{
+    z-index: 1;
+    transition: all 0.5s ease;
+    margin-top: 160px;
+    margin-bottom: 50px;
+    overflow-wrap: break-word;
+word-break: break-word;
+}
+
+.dedicatoria *{
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    bottom: 0;
+    color: red;
+    z-index: 2;
+}
+
+.hearts-layer{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.back-heart{
+    position: absolute;
+    width: 80px;
+    font-size: 80px;
+    animation-composition: add;
+    transition: all 0.3s ease;
+    animation: up-heart 3s forwards,
+        effect-heart 3s forwards;
+}
+
+@media (max-width: 750px) {
+    header h1{
+        font-size: 11vw;
+    }
+
+    header h1 span{
+        transform: translateY(-35%);
+    }
+
+    .dedicatoria{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        max-width: 80vw;
+        padding: 20px;
+        box-shadow: 0 0 10px 2px rgb(0, 0, 0, 0.1);
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    .dedicatoria p{
+        font-size: 25px;
+    }
+
+    .dedicatoria img{
+        max-width: 70%;
+        border-radius: 20px;
+    }
+
+    footer{
+        font-size: 20px;
+    }
+}
+
+.dedi-move *{
+    animation: dedi-move 0.5s 1 ease forwards;
+}
+
+@keyframes effect-heart {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+
+@keyframes up-heart {
+    from{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes dedi-move {
+    0%{scale: 1;}
+    50%{scale:1.2;}
+    100%{scale: 1;}
+}

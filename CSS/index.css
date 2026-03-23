@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --h11: 2s;
+    --h12: 2.75s;
+    --x: 40px;
+    --y: 40px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.welcome-body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+.welcome-body .welcome-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+    animation: show-welcome 3s ease forwards; 
+    animation-delay: 2s;
+    visibility: hidden;
+}
+
+.h1s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+}
+
+.welcome-h1{
+    font-size: 4vw;
+    position: absolute;
+    opacity: 0;
+}
+
+.ttl1{
+    animation: showhide-h1 1.3s forwards;
+    animation-delay: var(--h11);
+}
+
+.ttl2{
+    animation: showhide-h1 1.3s forwards;
+    animation-delay: var(--h12);
+}
+
+.welcome-vid{
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.hearts{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: -2;
+    width: 100vw;
+    font-size: 90px;
+}
+
+.hearts h2{
+    transition: all 0.3s ease;
+    animation-composition: add;
+}
+
+.hearts .hi{
+    transform: rotateZ(-30deg);    
+    animation: heart-move-i 3s ease-in-out infinite alternate;
+}
+
+.hearts .hd{
+    transform: rotateZ(30deg);
+    animation: heart-move-d 3s ease-in-out infinite alternate;
+}
+
+@media (max-width:720px) {
+    .welcome-h1{
+        font-size: 10vw;
+    }
+
+    :root{
+        --x: 20px;
+        --y: 20px;
+    }
+
+    .hearts{
+        flex-direction: column;
+        gap: 300px;
+    }
+}
+
+@keyframes show-welcome {
+    0%{
+        visibility: visible;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes showhide-h1 {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes heart-move-i {
+    from{
+        transform: translate(var(--x), var(--y));
+    }
+    to{
+        transform: translate(-var(--x), -var(--y));
+    }
+}
+
+@keyframes heart-move-d {
+    from{
+        transform: translate(-var(--x), -var(--y));
+    }
+    to{
+        transform: translate(var(--x), var(--y));
+    }
+}
