@@ -32,20 +32,20 @@ export const data = {
 
     ],
     images: [
-    "../../paginitaFU/resources/imagesDedi/f1.webp", 
-    "../../paginitaFU/resources/imagesDedi/f2.jpeg", 
-    "../../paginitaFU/resources/imagesDedi/f3.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f4.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f5.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f6.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f7.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f8.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f9.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f10.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f11.jpg",
-    "../../paginitaFU/resources/imagesDedi/f12.jpg",
-    "../../paginitaFU/resources/imagesDedi/yo.jpeg",
-    "../../paginitaFU/resources/imagesDedi/f13.jpg",
-    "../../paginitaFU/resources/imagesDedi/f14.jpeg"
+    "../../For-All/resources/imagesDedi/f1.webp", 
+    "../../For-All/resources/imagesDedi/f2.jpeg", 
+    "../../For-All/resources/imagesDedi/f3.jpeg",
+    "../../For-All/resources/imagesDedi/f4.jpeg",
+    "../../For-All/resources/imagesDedi/f5.jpeg",
+    "../../For-All/resources/imagesDedi/f6.jpeg",
+    "../../For-All/resources/imagesDedi/f7.jpeg",
+    "../../For-All/resources/imagesDedi/f8.jpeg",
+    "../../For-All/resources/imagesDedi/f9.jpeg",
+    "../../For-All/resources/imagesDedi/f10.jpeg",
+    "../../For-All/resources/imagesDedi/f11.jpg",
+    "../../For-All/resources/imagesDedi/f12.jpg",
+    "../../For-All/resources/imagesDedi/yo.jpeg",
+    "../../For-All/resources/imagesDedi/f13.jpg",
+    "../../For-All/resources/imagesDedi/f14.jpeg"
     ]
 }
